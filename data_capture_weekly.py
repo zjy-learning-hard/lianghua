@@ -52,10 +52,9 @@ if __name__ == "__main__":
     stock_zh_a_hist_min_em_df = ak.stock_zh_a_hist_min_em(symbol="600519", start_date=start_dt, end_date=end_dt, period="1", adjust="")        
     stock_zh_a_hist_min_em_df.to_csv("/maotai/minute_data/sh600519_"+today.strftime("%Y-%m-%d")+".csv", index=False)
               
-        
-    '''纳斯达克'''   
+
     fund_etf_hist_min_em_df = ak.fund_etf_hist_min_em(symbol="513300", period="1", adjust="", start_date=start_dt, end_date=end_dt)
     fund_etf_hist_min_em_df.to_csv("/nasidake/minute_data/nasidake_"+today.strftime("%Y-%m-%d")+".csv", index=False)
-    '''黄金''' 
+
     fund_etf_hist_min_em_df = ak.fund_etf_hist_min_em(symbol="518880", period="1", adjust="", start_date=start_dt, end_date=end_dt)
     fund_etf_hist_min_em_df.to_csv("/gold/minute_data/gold_"+today.strftime("%Y-%m-%d")+".csv", index=False)
