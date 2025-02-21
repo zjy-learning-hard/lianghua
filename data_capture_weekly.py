@@ -31,13 +31,13 @@ if __name__ == "__main__":
         print(f"执行任务日期: {data_dt}")
         print("正在获取伊利交易数据")
         stock_intraday_sina_df = ak.stock_intraday_sina(symbol="sh600887", date=data_dt)
-        file_name = r"C:\Users\17317\Desktop\lianghua\yili\trade_data\sh600887_trade"+data_dt+'.csv'
+        file_name = "/yili/trade_data/sh600887_trade"+data_dt+'.csv'
         stock_intraday_sina_df.to_csv(file_name, index=False)
         print("CSV 文件保存成功！")
         time.sleep(60)
         
     stock_zh_a_hist_min_em_df = ak.stock_zh_a_hist_min_em(symbol="600887", start_date=start_dt, end_date=end_dt, period="1", adjust="")        
-    stock_zh_a_hist_min_em_df.to_csv(r"C:\Users\17317\Desktop\lianghua\yili\minute_data\sh600887_"+today.strftime("%Y-%m-%d")+".csv", index=False)
+    stock_zh_a_hist_min_em_df.to_csv("/yili/minute_data/sh600887_"+today.strftime("%Y-%m-%d")+".csv", index=False)
     
     '''茅台'''      
     for i in range(5):
@@ -45,18 +45,18 @@ if __name__ == "__main__":
         print(f"执行任务日期: {data_dt}")
         print("正在获取茅台交易数据")
         stock_intraday_sina_df = ak.stock_intraday_sina(symbol="sh600519", date=data_dt)
-        file_name = r"C:\Users\17317\Desktop\lianghua\maotai\trade_data\sh600519_trade"+data_dt+'.csv'
+        file_name = "/maotai/trade_data/sh600519_trade"+data_dt+'.csv'
         stock_intraday_sina_df.to_csv(file_name, index=False)
         print("CSV 文件保存成功！")
         time.sleep(60)
     stock_zh_a_hist_min_em_df = ak.stock_zh_a_hist_min_em(symbol="600519", start_date=start_dt, end_date=end_dt, period="1", adjust="")        
-    stock_zh_a_hist_min_em_df.to_csv(r"C:\Users\17317\Desktop\lianghua\yili\minute_data\sh600519_"+today.strftime("%Y-%m-%d")+".csv", index=False)
+    stock_zh_a_hist_min_em_df.to_csv("/maotai/minute_data/sh600519_"+today.strftime("%Y-%m-%d")+".csv", index=False)
               
         
         '''纳斯达克'''
     fund_etf_hist_min_em_df = ak.fund_etf_hist_min_em(symbol="513300", period="1", adjust="", start_date=start_dt, end_date=end_dt)
-    fund_etf_hist_min_em_df.to_csv(r"C:\Users\17317\Desktop\lianghua\nasidake\minute_data\nasidake_"+today.strftime("%Y-%m-%d")+".csv", index=False)
+    fund_etf_hist_min_em_df.to_csv("/nasidake/minute_data/nasidake_"+today.strftime("%Y-%m-%d")+".csv", index=False)
 
         '''黄金etf'''
     fund_etf_hist_min_em_df = ak.fund_etf_hist_min_em(symbol="518880", period="1", adjust="", start_date=start_dt, end_date=end_dt)
-    fund_etf_hist_min_em_df.to_csv(r"C:\Users\17317\Desktop\lianghua\gold\minute_data\gold_"+today.strftime("%Y-%m-%d")+".csv", index=False)
+    fund_etf_hist_min_em_df.to_csv("/gold/minute_data/gold_"+today.strftime("%Y-%m-%d")+".csv", index=False)
