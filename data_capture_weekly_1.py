@@ -35,9 +35,7 @@ if __name__ == "__main__":
         stock_intraday_sina_df.to_csv(file_name, index=False)
         print("CSV 文件保存成功！")
         time.sleep(60)
-        
-    stock_zh_a_hist_min_em_df = ak.stock_zh_a_hist_min_em(symbol="600887", start_date=start_dt, end_date=end_dt, period="1", adjust="")    
-    stock_zh_a_hist_min_em_df.to_csv("./yili/minute_data/sh600887_"+today.strftime("%Y-%m-%d")+".csv", index=False)
+
     
     '''茅台'''      
     for i in range(5):
@@ -49,6 +47,11 @@ if __name__ == "__main__":
         stock_intraday_sina_df.to_csv(file_name, index=False)
         print("CSV 文件保存成功！")
         time.sleep(60)
+
+            
+    stock_zh_a_hist_min_em_df = ak.stock_zh_a_hist_min_em(symbol="600887", start_date=start_dt, end_date=end_dt, period="1", adjust="")    
+    stock_zh_a_hist_min_em_df.to_csv("./yili/minute_data/sh600887_"+today.strftime("%Y-%m-%d")+".csv", index=False)
+    
     stock_zh_a_hist_min_em_df = ak.stock_zh_a_hist_min_em(symbol="600519", start_date=start_dt, end_date=end_dt, period="1", adjust="")        
     stock_zh_a_hist_min_em_df.to_csv("./maotai/minute_data/sh600519_"+today.strftime("%Y-%m-%d")+".csv", index=False)
               
