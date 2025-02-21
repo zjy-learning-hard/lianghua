@@ -26,5 +26,5 @@ jobs:
         pip install -r requirements.txt  # 如有依赖
 
     - name: Execute Python script
-      run: python data_capture_weekly.py  # 替换为你的脚本路径
+      run: python data_capture_weekly_1.py  # 替换为你的脚本路径
 
