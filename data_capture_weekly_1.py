@@ -36,7 +36,7 @@ if __name__ == "__main__":
         print("CSV 文件保存成功！")
         time.sleep(60)
         
-    stock_zh_a_hist_min_em_df = ak.stock_zh_a_hist_min_em(symbol="600887", start_date=start_dt, end_date=end_dt, period="1", adjust="")        
+    stock_zh_a_hist_min_em_df = ak.stock_zh_a_hist_min_em(symbol="600887", start_date=start_dt, end_date=end_dt, period="1", adjust="")    
     stock_zh_a_hist_min_em_df.to_csv("./yili/minute_data/sh600887_"+today.strftime("%Y-%m-%d")+".csv", index=False)
     
     '''茅台'''      
